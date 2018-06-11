@@ -26,9 +26,9 @@ if (!exists("dsSCC")) {
 
 agg.data <- with(dsNEI, aggregate(Emissions, by = list(year), sum))
 
-
+png('plot1.png')
 plot(agg.data, type = "o", ylab = expression("Total Emissions, PM 2.5"), 
      xlab = "Year", main = "Total Emissions in  USA")
-polygon(agg.data)
 
+dev.off()
 ## end section
